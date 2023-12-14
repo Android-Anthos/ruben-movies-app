@@ -32,14 +32,24 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
-    android:id="@id/circular_progress"
+    android:id="@+id/circular_progress"
     android:layout_width="40dp"
     android:layout_height="40dp"
     android:layout_gravity="center"
     app:textColor="@color/green"
     app:formattingPattern="%.1f"
     app:direction="clockwise"
-    app:textSize"14sp"
+    app:textSize="14sp"
     app:fillBackground="true"
-    app:progressBackgroundColor="@color/white "
-    app:dot_with
+    app:progressBackgroundColor="@color/white"
+    app:dotWidth="6dp"
+    app:progressStrokeWidth="3dp"
+    app:progressColor="@color/green"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
