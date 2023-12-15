@@ -21,6 +21,21 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this)[PeliculasViewModel::class.java]
 
     setupRecyclerView()
+
+        viewModel.listaPeliculas.observe(this){
+            adapterPeliculas.listaPeliculas = it
+            adapterPeliculas.notifyDataSetChanged()
+        }
+
+        binding.cvCartelera.setOnClickListener{
+            viewModel.obtenerCartelera()
+            cambiarColorBoton("car")
+        }
+
+        binding.cvPopulares.setOnClickListener{
+            viewModel.obtenerPopulares()
+            cambiarColorBoton("pop")
+        }
     }
 
     private fun setupRecyclerView() {
