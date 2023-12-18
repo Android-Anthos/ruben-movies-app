@@ -1,6 +1,7 @@
 package com.anthos.finalprojectrz.views
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,17 +30,21 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnCartelera.setOnClickListener {
             viewModel.obtenerCartelera()
-
+            binding.carteleraimg.visibility= View.VISIBLE
+            binding.popularesimg.visibility= View.GONE
         }
 
 
         binding.btnPopulares.setOnClickListener {
             viewModel.obtenerPopulares()
+            binding.carteleraimg.visibility= View.GONE
+            binding.popularesimg.visibility= View.VISIBLE
 
         }
 
         viewModel.obtenerCartelera()
-
+        binding.carteleraimg.visibility= View.VISIBLE
+        binding.popularesimg.visibility= View.GONE
     }
 
     private fun setupRecyclerView() {

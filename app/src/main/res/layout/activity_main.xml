@@ -20,6 +20,29 @@
         tools:listitem="@layout/item_rv_peliculas" />
 
     <ImageView
+        android:id="@+id/carteleraimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/cartelera"
+        app:layout_constraintBottom_toTopOf="@id/rvPeliculas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chileflix" />
+
+    <ImageView
+        android:id="@+id/popularesimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/populares"
+        app:layout_constraintBottom_toTopOf="@id/rvPeliculas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chileflix" />
+
+
+    <ImageView
         android:id="@+id/chileflix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
