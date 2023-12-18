@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@color/black"
     tools:context=".views.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -17,8 +16,19 @@
         app:layout_constraintBottom_toTopOf="@id/llOpciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chileflix"
         tools:listitem="@layout/item_rv_peliculas" />
+
+    <ImageView
+        android:id="@+id/chileflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/chileflixconc"
+        app:layout_constraintBottom_toTopOf="@id/rvPeliculas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/llOpciones"
@@ -31,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Contenedor para la opción "Cartelera" -->
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -54,7 +64,6 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
-        <!-- Contenedor para la opción "Populares" -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
