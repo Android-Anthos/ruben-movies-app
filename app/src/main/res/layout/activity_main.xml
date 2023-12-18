@@ -41,27 +41,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvCartelera"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnCartelera"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:elevation="8dp"
-                app:cardBackgroundColor="@color/green" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:background="@color/green"
                 android:text="@string/cartelera"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:padding="8dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -70,20 +65,16 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvPopulares"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnPopulares"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:elevation="8dp"
-                app:cardBackgroundColor="@color/green" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
+                android:background="@color/green"
                 android:text="@string/populares"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:padding="8dp"/>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

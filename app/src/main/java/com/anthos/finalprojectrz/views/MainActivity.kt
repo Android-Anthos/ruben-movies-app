@@ -1,10 +1,9 @@
 package com.anthos.finalprojectrz.views
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.anthos.finalprojectrz.R
 import com.anthos.finalprojectrz.databinding.ActivityMainBinding
 import com.anthos.finalprojectrz.viewmodels.PeliculasViewModel
 
@@ -28,14 +27,15 @@ class MainActivity : AppCompatActivity() {
             adapterPeliculas.notifyDataSetChanged()
         }
 
-        binding.cvCartelera.setOnClickListener {
+        binding.btnCartelera.setOnClickListener {
             viewModel.obtenerCartelera()
-            cambiarColorBoton("car")
+
         }
 
-        binding.cvPopulares.setOnClickListener {
+
+        binding.btnPopulares.setOnClickListener {
             viewModel.obtenerPopulares()
-            cambiarColorBoton("pop")
+
         }
 
         viewModel.obtenerCartelera()
@@ -49,21 +49,6 @@ class MainActivity : AppCompatActivity() {
         binding.rvPeliculas.adapter = adapterPeliculas
     }
 
-    private fun cambiarColorBoton(boton: String) {
-        when (boton) {
-            "car" -> {
-                binding.cvCartelera.setCardBackgroundColor(resources.getColor(R.color.green))
-                binding.cvPopulares.setCardBackgroundColor(resources.getColor(R.color.blue))
-            }
-
-            "pop" -> {
-                binding.cvCartelera.setCardBackgroundColor(resources.getColor(R.color.blue))
-                binding.cvPopulares.setCardBackgroundColor(resources.getColor(R.color.green))
-
-            }
-
-        }
 
 
-    }
 }
