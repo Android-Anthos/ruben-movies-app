@@ -4,7 +4,7 @@ import com.anthos.finalprojectrz.data.RzMoviesRepositoryImpl
 import com.anthos.finalprojectrz.data.mapper.RzMoviesMapper
 import com.anthos.finalprojectrz.data.remote.RzMoviesDataSourceImpl
 import com.anthos.finalprojectrz.data.remote.api.RzMoviesApi
-import com.anthos.finalprojectrz.data.remote.api.configuration.RzIdentifier
+import com.anthos.finalprojectrz.data.remote.api.configuration.AuthInterceptor
 import com.anthos.finalprojectrz.data.remote.api.configuration.UrlProvider.getMoviesUrl
 import com.anthos.finalprojectrz.data.source.RzMoviesDataSource
 import com.anthos.finalprojectrz.presentation.repository.MoviesRepository
@@ -26,9 +26,9 @@ object DataModule {
 
     private fun okHttpClient(): OkHttpClient {
         val authToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOWNhM2JhMDhjYzMxMTEwMDQzMzI1M2U2NTMxNjcwYiIsInN1YiI6IjY1NzlhN2ExZWM4YTQzMDBhYTZkNGQ0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5yYI9Ac_wG2IgGo29Rgxay38tUPikX1RHkCd_tmpXcE"
-        val rzIdentifier = RzIdentifier(authToken)
+        val authInterceptor = AuthInterceptor(authToken)
         return OkHttpClient.Builder()
-            .addInterceptor(rzIdentifier)
+            .addInterceptor(authInterceptor)
             .build()
     }
 

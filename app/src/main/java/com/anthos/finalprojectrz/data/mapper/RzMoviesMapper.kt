@@ -4,10 +4,13 @@ import com.anthos.finalprojectrz.data.remote.model.RzBelToCollApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzGenreApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzLanguagesApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzMovieApiModel
+import com.anthos.finalprojectrz.data.remote.model.RzMovieDetailsApi
 import com.anthos.finalprojectrz.data.remote.model.RzMoviesApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzProdCompApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzProdCountApiModel
 import com.anthos.finalprojectrz.presentation.moviedetail.model.BelongsToCollection
+import com.anthos.finalprojectrz.presentation.moviedetail.model.Genre
+import com.anthos.finalprojectrz.presentation.moviedetail.model.MovieDetails
 import com.anthos.finalprojectrz.presentation.moviedetail.model.ProductionCompanies
 import com.anthos.finalprojectrz.presentation.moviedetail.model.SpokenLanguages
 import com.anthos.finalprojectrz.presentation.moviedetail.model.ProductionCountries

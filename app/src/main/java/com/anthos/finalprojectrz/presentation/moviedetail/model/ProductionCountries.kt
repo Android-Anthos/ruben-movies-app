@@ -1,4 +1,6 @@
 package com.anthos.finalprojectrz.presentation.moviedetail.model
 
-class ProductionCountries {
-}
+data class ProductionCountries(
+    val iso: String,
+    val originCountry: String
+)
