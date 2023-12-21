@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator
 import com.anthos.finalprojectrz.R
@@ -21,7 +20,6 @@ class AdapterPeliculas(
     var listaPeliculas: List<PeliculaModel>
 ): RecyclerView.Adapter<AdapterPeliculas.ViewHolder>(){
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val cvPelicula=itemView.findViewById(R.id.cvPelicula) as CardView
         val ivPoster = itemView.findViewById(R.id.ivPoster) as ImageView
         val pcIndicator=itemView.findViewById(R.id.circular_progress)as CircularProgressIndicator
 

@@ -4,4 +4,9 @@
     <string name="cartelera">Cartelera</string>
     <string name="populares">Populares</string>
     <string name="elija_cartelera_o_populares">Elija Cartelera o Populares</string>
+    <string name="letrero_populares">letrero_populares</string>
+    <string name="letrero_cartelera">letrero_cartelera</string>
+    <string name="logo_chileflix">logo_chileflix</string>
+    <string name="boton_populares">boton populares</string>
+    <string name="boton_cartelera">boton cartelera</string>
 </resources>
