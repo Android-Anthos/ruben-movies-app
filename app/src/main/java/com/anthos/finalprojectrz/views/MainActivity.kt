@@ -1,12 +1,15 @@
 package com.anthos.finalprojectrz.views
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.anthos.finalprojectrz.R
 import com.anthos.finalprojectrz.databinding.ActivityMainBinding
 import com.anthos.finalprojectrz.viewmodels.PeliculasViewModel
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +35,12 @@ class MainActivity : AppCompatActivity() {
             viewModel.obtenerCartelera()
             binding.carteleraimg.visibility= View.VISIBLE
             binding.popularesimg.visibility= View.GONE
+
+
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.chileflixintro)
+            mediaPlayer?.start()
+            mediaPlayer?.setVolume(1.0f, 1.0f)
+
         }
 
 
@@ -39,6 +48,10 @@ class MainActivity : AppCompatActivity() {
             viewModel.obtenerPopulares()
             binding.carteleraimg.visibility= View.GONE
             binding.popularesimg.visibility= View.VISIBLE
+
+            val mediaPlayer: MediaPlayer? = MediaPlayer.create(this, R.raw.chileflixintro)
+            mediaPlayer?.start()
+            mediaPlayer?.setVolume(1.0f, 1.0f)
 
         }
 
