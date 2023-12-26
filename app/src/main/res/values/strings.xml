@@ -2,4 +2,13 @@
     <string name="app_name">finalprojectrz</string>
     <string name="final_project_rz">Final Project RZ</string>
     <string name="title_movies">Peliculas</string>
+    <string name="poster">Poster</string>
+    <string name="error">Ha ocurrido un problema</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="nota">Nota</string>
+    <string name="lanzamiento">lanzamiento</string>
+    <string name="poster_i">Poster</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="anterior">Anterior</string>
 </resources>
