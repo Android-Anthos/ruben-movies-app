@@ -22,6 +22,8 @@ import com.anthos.finalprojectrz.presentation.movies.model.Movies
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import androidx.recyclerview.widget.GridLayoutManager
+
 
 class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
     private var binding: FragmentMoviesBinding? = null
@@ -93,7 +95,7 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
                 }
             binding?.rvMovies?.apply {
                 adapter = moviesAdapter
-                layoutManager = LinearLayoutManager(context)
+                layoutManager = GridLayoutManager(context, 3)
                 isVisible = true
             }
         }

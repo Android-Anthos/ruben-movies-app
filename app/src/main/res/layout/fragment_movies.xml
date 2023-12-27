@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".presentation.movies.model.Movies">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,11 +12,23 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/card_pagination"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chileflix"
         tools:itemCount="3"
         tools:listitem="@layout/item_movie"
         tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/chileflix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/rv_movies"
+        android:src="@drawable/chileflixconc"
+        tools:layout_editor_absoluteX="128dp" />
 
     <LinearLayout
         android:id="@+id/linear_error"
@@ -55,7 +68,7 @@
             <Button
                 android:id="@+id/button_prev"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/anterior"
@@ -71,7 +84,7 @@
             <Button
                 android:id="@+id/button_next"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/siguiente"
@@ -88,5 +101,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

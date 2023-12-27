@@ -16,7 +16,8 @@
                 android:id="@+id/image_poster"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:scaleType="centerCrop"
+                android:layout_margin="16dp"
+                android:scaleType="fitCenter"
                 android:contentDescription="@string/poster"/>
 
             <androidx.appcompat.widget.LinearLayoutCompat
