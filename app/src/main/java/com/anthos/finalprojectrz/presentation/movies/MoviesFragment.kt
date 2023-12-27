@@ -1,5 +1,6 @@
 package com.anthos.finalprojectrz.presentation.movies
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,7 +12,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.anthos.finalprojectrz.R
 import com.anthos.finalprojectrz.databinding.FragmentMoviesBinding
 import com.anthos.finalprojectrz.di.PresentationModule.provideMoviesViewModelFactory
@@ -92,6 +92,9 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
                         R.id.action_moviesFragment_to_movieDetailsFragment,
                         bundle
                     )
+
+                    val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.chileflixintro)
+                    mediaPlayer?.start()
                 }
             binding?.rvMovies?.apply {
                 adapter = moviesAdapter
@@ -117,15 +120,14 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
                     it.buttonNext.isVisible = true
                 }
             }
-            it.textPagination.text = "Página ${movies.page}"
+            it.textPagination.text = getString(R.string.pagination_text, movies.page)
 
             it.buttonNext.setOnClickListener {
                 emitUiEvent(MoviesUiEvent.GetMoviesUiEvent(page = movies.page + 1))
-
             }
+
             it.buttonPrev.setOnClickListener {
                 emitUiEvent(MoviesUiEvent.GetMoviesUiEvent(page = movies.page - 1))
-
             }
         }
     }
@@ -143,9 +145,9 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
     private fun showError(visible: Boolean) {
         binding?.let {
             if (visible) {
-                it.linearError.isVisible = true
+                it.imoffline.isVisible = true
             } else {
-                it.linearError.isGone = true
+                it.imoffline.isGone = true
             }
         }
     }

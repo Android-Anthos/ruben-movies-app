@@ -17,6 +17,9 @@ class ItemMoviesViewHolder(
         binding.apply {
             title.text = movie.title
 
+            val year = movie.releaseDate.split("-").firstOrNull()
+            releaseDate.text = year
+
             Glide.with(context).load("https://image.tmdb.org/t/p/w440_and_h660_face/" + movie.posterPath).into(imagePoster)
             cardMovie.setOnClickListener {
                 onItemClick.invoke()

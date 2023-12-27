@@ -79,6 +79,7 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
         binding?.let {
             it.title.text = movieDetails.title
             it.overview.text = movieDetails.overview
+            it.releaseDate.text = movieDetails.releaseDate
             Glide.with(it.root)
                 .load("https://image.tmdb.org/t/p/w440_and_h660_face/" + movieDetails.posterPath)
                 .into(it.imagePoster)
