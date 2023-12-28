@@ -96,7 +96,8 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
                         bundle
                     )
 
-                    val mediaPlayer: MediaPlayer? = MediaPlayer.create(context, R.raw.chileflixintro)
+                    val mediaPlayer: MediaPlayer? =
+                        MediaPlayer.create(context, R.raw.chileflixintro)
                     mediaPlayer?.start()
                 }
             binding?.rvMovies?.apply {
@@ -114,10 +115,12 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
                     it.buttonPrev.isInvisible = true
                     it.buttonNext.isVisible = true
                 }
+
                 movies.totalPages -> {
                     it.buttonPrev.isVisible = true
                     it.buttonNext.isInvisible = true
                 }
+
                 else -> {
                     it.buttonPrev.isVisible = true
                     it.buttonNext.isVisible = true
@@ -164,7 +167,6 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
         super.onDestroy()
         binding = null
     }
-
 
 
 }

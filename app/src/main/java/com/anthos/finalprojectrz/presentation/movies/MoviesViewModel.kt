@@ -21,6 +21,7 @@ class MoviesViewModel(private val repository: MoviesRepository) : ViewModel(),
             is MoviesUiEvent.InitialUiEvent -> {
                 getMovies(page = uiEvent.page)
             }
+
             is MoviesUiEvent.GetMoviesUiEvent -> {
                 getMovies(page = uiEvent.page)
             }

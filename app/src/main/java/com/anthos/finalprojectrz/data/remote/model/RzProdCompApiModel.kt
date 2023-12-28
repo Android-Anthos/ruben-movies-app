@@ -6,7 +6,7 @@ import com.anthos.finalprojectrz.data.remote.model.RzConstants.NAME
 import com.anthos.finalprojectrz.data.remote.model.RzConstants.ORIGIN_COUNTRY
 import com.google.gson.annotations.SerializedName
 
-class RzProdCompApiModel (
+class RzProdCompApiModel(
     @SerializedName(ID) val id: Int?,
     @SerializedName(LOGO_PATH) val logoPath: String?,
     @SerializedName(NAME) val name: String?,

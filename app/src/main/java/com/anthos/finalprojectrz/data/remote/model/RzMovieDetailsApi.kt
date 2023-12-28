@@ -27,7 +27,7 @@ import com.anthos.finalprojectrz.data.remote.model.RzConstants.VOTE_AVERAGE
 import com.anthos.finalprojectrz.data.remote.model.RzConstants.VOTE_COUNT
 import com.google.gson.annotations.SerializedName
 
-class RzMovieDetailsApi (
+class RzMovieDetailsApi(
     @SerializedName(ADULT) val adult: Boolean?,
     @SerializedName(BACKDROP_PATH) val backdropPath: String?,
     @SerializedName(BELONGS_TO_COLLECTION) val belongsToCollection: RzCollectionApiModel?,

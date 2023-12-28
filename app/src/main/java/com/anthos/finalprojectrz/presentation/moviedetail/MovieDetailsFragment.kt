@@ -21,7 +21,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
-class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
+class MovieDetailsFragment : Fragment(), UiPresentation<MovieDetailsUiState> {
     private var binding: FragmentDetailsMovieBinding? = null
     private val viewModel: MovieDetailsViewModel by viewModels { provideMovieDetailsViewModelFactory }
 
@@ -50,7 +50,7 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
             findNavController().navigateUp()
         }
 
-            resetImofflineVisibility2()
+        resetImofflineVisibility2()
 
 
         arguments?.let {

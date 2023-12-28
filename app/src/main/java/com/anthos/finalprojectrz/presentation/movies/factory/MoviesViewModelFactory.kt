@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.anthos.finalprojectrz.presentation.movies.MoviesViewModel
 import com.anthos.finalprojectrz.presentation.repository.MoviesRepository
 
-class MoviesViewModelFactory(private val repository: MoviesRepository): ViewModelProvider.Factory {
+class MoviesViewModelFactory(private val repository: MoviesRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when (modelClass) {
             MoviesViewModel::class.java -> MoviesViewModel(repository)

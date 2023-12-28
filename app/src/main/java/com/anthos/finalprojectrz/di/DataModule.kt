@@ -25,7 +25,8 @@ object DataModule {
     }
 
     private fun okHttpClient(): OkHttpClient {
-        val authToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOWNhM2JhMDhjYzMxMTEwMDQzMzI1M2U2NTMxNjcwYiIsInN1YiI6IjY1NzlhN2ExZWM4YTQzMDBhYTZkNGQ0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5yYI9Ac_wG2IgGo29Rgxay38tUPikX1RHkCd_tmpXcE"
+        val authToken =
+            "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxOWNhM2JhMDhjYzMxMTEwMDQzMzI1M2U2NTMxNjcwYiIsInN1YiI6IjY1NzlhN2ExZWM4YTQzMDBhYTZkNGQ0MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5yYI9Ac_wG2IgGo29Rgxay38tUPikX1RHkCd_tmpXcE"
         val authInterceptor = AuthInterceptor(authToken)
         return OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
