@@ -1,6 +1,6 @@
 package com.anthos.finalprojectrz.data.mapper
 
-import com.anthos.finalprojectrz.data.remote.model.RzBelToCollApiModel
+import com.anthos.finalprojectrz.data.remote.model.RzCollectionApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzGenreApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzLanguagesApiModel
 import com.anthos.finalprojectrz.data.remote.model.RzMovieApiModel
@@ -73,7 +73,7 @@ class RzMoviesMapper {
         voteCount = voteCount ?: 0,
     )
 
-    private fun RzBelToCollApiModel?.toBelongsToCollection() = BelongsToCollection(
+    private fun RzCollectionApiModel?.toBelongsToCollection() = BelongsToCollection(
         id = this?.id ?: 0,
         name = this?.name.orEmpty(),
         posterPath = this?.posterPath.orEmpty(),

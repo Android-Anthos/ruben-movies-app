@@ -96,8 +96,23 @@
 
     <ProgressBar
         android:id="@+id/progress"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="center"
-        android:indeterminate="true" />
+        android:indeterminate="true"
+        android:indeterminateTint="@color/red"/>
+
+    <LinearLayout
+        android:id="@+id/imoffline2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imofflinewhite"
+            android:contentDescription="@string/dino_error" />
+    </LinearLayout>
 </FrameLayout>

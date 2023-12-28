@@ -46,6 +46,9 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        resetImofflineVisibility()
+
         if (viewModel.uiState().value == MoviesUiState.LoadingUiState) {
             emitUiEvent(MoviesUiEvent.InitialUiEvent(page = 1))
         }
@@ -152,8 +155,16 @@ class MoviesFragment : Fragment(), UiPresentation<MoviesUiState> {
         }
     }
 
+    private fun resetImofflineVisibility() {
+        binding?.imoffline?.isGone = true
+    }
+
+
     override fun onDestroy() {
         super.onDestroy()
         binding = null
     }
+
+
+
 }

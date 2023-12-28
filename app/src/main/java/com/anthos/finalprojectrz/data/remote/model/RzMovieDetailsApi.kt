@@ -30,7 +30,7 @@ import com.google.gson.annotations.SerializedName
 class RzMovieDetailsApi (
     @SerializedName(ADULT) val adult: Boolean?,
     @SerializedName(BACKDROP_PATH) val backdropPath: String?,
-    @SerializedName(BELONGS_TO_COLLECTION) val belongsToCollection: RzBelToCollApiModel?,
+    @SerializedName(BELONGS_TO_COLLECTION) val belongsToCollection: RzCollectionApiModel?,
     @SerializedName(BUDGET) val budget: Int?,
     @SerializedName(GENRES) val genres: List<RzGenreApiModel?>?,
     @SerializedName(HOMEPAGE) val homepage: String?,

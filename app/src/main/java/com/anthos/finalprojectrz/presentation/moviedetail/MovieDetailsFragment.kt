@@ -40,6 +40,9 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        resetImofflineVisibility2()
+
         arguments?.let {
             val movieId = it.getInt("movieId")
             emitUiEvent(MovieDetailsUiEvent.InitialUiEvent(movieId = movieId))
@@ -62,6 +65,8 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
         when (uiState) {
             MovieDetailsUiState.ErrorUiState -> {
                 showLoading(visible = false)
+                showError2(visible = true)
+
             }
 
             MovieDetailsUiState.LoadingUiState -> {
@@ -92,6 +97,21 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
         } else {
             binding?.progress?.isGone = true
         }
+    }
+
+
+    private fun showError2(visible: Boolean) {
+        binding?.let {
+            if (visible) {
+                it.imoffline2.isVisible = true
+            } else {
+                it.imoffline2.isGone = true
+            }
+        }
+    }
+
+    private fun resetImofflineVisibility2() {
+        binding?.imoffline2?.isGone = true
     }
 
     override fun onDestroy() {

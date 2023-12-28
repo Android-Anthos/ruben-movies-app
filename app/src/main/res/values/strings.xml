@@ -15,4 +15,9 @@
     <string name="fecha_de_lanzamiento">Fecha de Estreno</string>
     <string name="logo2">Logo 2</string>
     <string name="pagination_text">Página %1$d</string>
+    <string name="dino_error">Dino Error</string>
+    <string name="dino_error1">Dino Error 1</string>
+    <string name="logo_concavo">Logo Concavo</string>
+    <string name="b1">b1</string>
+    <string name="b2">b2</string>
 </resources>
