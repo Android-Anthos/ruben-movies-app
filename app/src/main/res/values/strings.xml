@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">finalprojectrz</string>
     <string name="final_project_rz">Final Project RZ</string>
+    <string name="title_movies">Movie</string>
+    <string name="poster">Poster</string>
+    <string name="error">Ha ocurrido un problema</string>
+    <string name="button_prev">buttonPrev</string>
+    <string name="buton_next">buttonNext</string>
+    <string name="nota">Nota</string>
+    <string name="lanzamiento">lanzamiento</string>
+    <string name="poster_i">Poster</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="anterior">Anterior</string>
+    <string name="release">Year Release</string>
+    <string name="fecha_de_lanzamiento">Fecha de Estreno</string>
+    <string name="logo2">Logo 2</string>
+    <string name="pagination_text">Página %1$d</string>
+    <string name="dino_error">Dino Error</string>
+    <string name="dino_error1">Dino Error 1</string>
+    <string name="logo_concavo">Logo Concavo</string>
+    <string name="b1">b1</string>
+    <string name="b2">b2</string>
 </resources>
