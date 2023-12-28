@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.anthos.finalprojectrz.databinding.FragmentDetailsMovieBinding
 import com.anthos.finalprojectrz.di.PresentationModule.provideMovieDetailsViewModelFactory
 import com.anthos.finalprojectrz.presentation.core.UiPresentation
@@ -36,12 +38,20 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
             binding = FragmentDetailsMovieBinding.inflate(inflater, container, false)
         }
         return binding?.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        resetImofflineVisibility2()
+        (activity as? AppCompatActivity)?.supportActionBar?.hide()
+
+        binding?.backButton?.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
+            resetImofflineVisibility2()
+
 
         arguments?.let {
             val movieId = it.getInt("movieId")
@@ -99,13 +109,14 @@ class MovieDetailsFragment  : Fragment(), UiPresentation<MovieDetailsUiState> {
         }
     }
 
-
     private fun showError2(visible: Boolean) {
         binding?.let {
             if (visible) {
                 it.imoffline2.isVisible = true
+
             } else {
                 it.imoffline2.isGone = true
+
             }
         }
     }
