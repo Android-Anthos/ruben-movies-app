@@ -20,7 +20,7 @@ internal class SplashScreenActivity : AppCompatActivity() {
 
 
         GlobalScope.launch {
-            delay(5000)
+            delay(2000)
             withContext(Dispatchers.Main) {
                 startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
                 finish()
